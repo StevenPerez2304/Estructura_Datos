@@ -1,4 +1,4 @@
-let expr = "mangos"
+let expr = "pera"
 
 switch (expr) {
   case "mangos":
