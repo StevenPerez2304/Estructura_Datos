@@ -241,7 +241,7 @@ public class CentroDistribucion {
                 "\n===== RESULTADOS =====");
 
         System.out.println(
-                "Búsqueda Secuencial: "
+                "Busqueda Secuencial: "
                         + tiempoSec +
                         " ns");
 
@@ -251,7 +251,7 @@ public class CentroDistribucion {
                         " ns");
 
         System.out.println(
-                "Búsqueda Binaria: "
+                "Busqueda Binaria: "
                         + tiempoBin +
                         " ns");
 
@@ -262,7 +262,7 @@ public class CentroDistribucion {
 
         if (resultadoSec != null) {
             System.out.println(
-                    "\nSecuencial encontró ID: "
+                    "\nSecuencial encontro ID: "
                             + resultadoSec.getId());
         }
 
