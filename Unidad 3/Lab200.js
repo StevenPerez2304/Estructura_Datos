@@ -74,4 +74,19 @@ class MotorIndexacionBST {
         return null;
     }
 
+    // Exportar historial ordenado alfabéticamente (Inorden)
+    exportarHistorial(nodo = this.raiz) {
+
+        if (nodo === null) {
+            return;
+        }
+
+        this.exportarHistorial(nodo.izquierda);
+
+        console.log(
+            `Keyword: ${nodo.keyword} | URL: ${nodo.urlCache} | Visitas: ${nodo.visitas}`
+        );
+
+        this.exportarHistorial(nodo.derecha);
+    }
 }
