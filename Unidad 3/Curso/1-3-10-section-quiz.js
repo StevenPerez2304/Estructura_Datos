@@ -1,0 +1,12 @@
+console.log("Steven Perez");
+console.log("1542");
+console.log(1542);
+console.log("abc", "def", "ghi");
+console.log("Steven Perez (1542)");
+console.log("Steven", "Perez", "(1542)");
+console.log("Steven");
+console.log("Perez");
+console.log("(1542)");
+console.log("Steven" + "Perez" + "(1542)");
+console.log("Steven" + "Perez" + "(1542)");
+console.log("http://test.org");
