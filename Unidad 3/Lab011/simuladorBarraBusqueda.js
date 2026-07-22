@@ -17,21 +17,41 @@ diccionario.forEach(termino => {
     motor.insertarTermino(termino);
 });
 
-console.log("Diccionario de paquetería cargado exitosamente.");
+console.log("======================================");
+console.log(" Motor de Autocompletado Inicializado");
+console.log("======================================");
 
-console.log("\nBúsqueda de sugerencias:");
+// ======================================================
+// PRUEBA 1: Llamadas Individuales (Análisis de Precisión)
+// ======================================================
 
-console.log("Prefijo 'pa':");
+console.log("\n--- Búsqueda Manual ---");
+
+console.log("Sugerencias para 'p':");
+console.log(motor.obtenerSugerencias("p"));
+
+console.log("\nSugerencias para 'pa':");
 console.log(motor.obtenerSugerencias("pa"));
 
-console.log("\nPrefijo 'po':");
-console.log(motor.obtenerSugerencias("po"));
+console.log("\nSugerencias para 'pos':");
+console.log(motor.obtenerSugerencias("pos"));
 
-console.log("\nPrefijo 'pr':");
-console.log(motor.obtenerSugerencias("pr"));
 
-console.log("\nPrefijo 'es':");
-console.log(motor.obtenerSugerencias("es"));
+// ======================================================
+// PRUEBA 2: Bucle Iterativo (Análisis de Escalabilidad)
+// ======================================================
 
-console.log("\nPrefijo 'pe':");
-console.log(motor.obtenerSugerencias("pe"));
+const prefijosPrueba = ["p", "pa", "pos", "e", "pe"];
+
+console.log("\n--- Simulación de Bucle de Búsqueda (Carga de Trabajo) ---");
+
+prefijosPrueba.forEach(prefijo => {
+
+    console.time(`Tiempo_Busqueda_${prefijo}`);
+
+    const resultados = motor.obtenerSugerencias(prefijo);
+
+    console.timeEnd(`Tiempo_Busqueda_${prefijo}`);
+
+    console.log(` -> Sugerencias para '${prefijo}':`, resultados);
+});
